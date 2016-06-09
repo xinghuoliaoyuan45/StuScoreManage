@@ -1,0 +1,9 @@
+.bg{background:url(http://localhost:8080/StuScoreManage/1.jpg) no-repeat center fixed}
+.bg1{background:url(http://localhost:8080/StuScoreManage/2.png) no-repeat center fixed}
+.bg2{background:url(http://localhost:8080/StuScoreManage/3.png) no-repeat center fixed}
+.logo{
+width:100px;
+heigth:50px;
+text-align:center;
+margin:auto;
+}

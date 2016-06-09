@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+	href="http://localhost:8080/StuScoreManage/vendor/bootstrap3/css/bg.css" />
+    <link rel="stylesheet" href="http://localhost:8080/StuScoreManage/vendor/bootstrap3/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="http://localhost:8080/StuScoreManage/vendor/angular/angularjs.js"></script>
+    <script type="text/javascript" src="http://localhost:8080/StuScoreManage/stumanager/app/updataall.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div ng-app="myApp">
+        <div ng-controller="mm" >
+            <input type="text" ng-model="filterVal"><input type="button" ng-click="fnFilter()" value="搜索">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>学生学号</th>
+                    <th>学生名字</th>
+                    <th>学生班级</th>
+                    <th>Linux成绩</th>
+                    <th>math成绩</th>
+                    <th>java成绩</th>
+                    <th>操作</th>
+                </tr>
+
+                <tr  ng-repeat="x in dataList">
+                <td>{{ x.id}}</td>
+                <td>{{ x.username}}</td>
+                <td>{{ x.stuclass}}</td>
+                <td>
+                    <button type="button" class="btn tn-primary" ng-click="reducelinux(x.id)">-</button>
+                    <input type="text" value="{{x.linux}}" ng-model="x.linux">
+                    <button type="button" ng-click="addlinux(x.id)" class="btn tn-primary">+</button>
+                </td>
+                <td>
+                    <button type="button" class="btn tn-primary" ng-click="reducemath(x.id)">-</button>
+                    <input type="text" value="{{x.math}}" ng-model="x.math">
+                    <button type="button"  ng-click="addmath(x.id)"class="btn tn-primary">+</button>
+                </td>
+                <td>
+                    <button type="button" class="btn tn-primary" ng-click="reducejava(x.id)">-</button>
+                    <input type="text" value="{{x.java}}" ng-model="x.java">
+                    <button type="button"  ng-click="addjava(x.id)"class="btn tn-primary">+</button>
+                </td>
+                <td>
+                    <button type="button" ng-click="submit(x.id)" class="btn btn-danger">提交</button>
+                </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="button" ng-click="submitall()" class="btn btn-danger">页面上内容一起提交</button>
+                    </td>
+                </tr>
+                </thead>
+                </table>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

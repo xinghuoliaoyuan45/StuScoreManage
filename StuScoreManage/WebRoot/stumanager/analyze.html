@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<link rel="stylesheet"
+	href="http://localhost:8080/StuScoreManage/vendor/bootstrap3/css/bg.css" />
+<link rel="stylesheet"
+	href="http://localhost:8080/StuScoreManage/vendor/bootstrap3/css/bootstrap.min2.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script
+	src="http://localhost:8080/StuScoreManage/vendor/bootstrap3/js/jquery-1.7.2.min.js"></script>
+<script
+	src="http://localhost:8080/StuScoreManage/vendor/bootstrap3/js/bootstrap.min2.4.js"></script>
+<script type="text/javascript"
+	src="http://localhost:8080/StuScoreManage/vendor/angular/angularjs.js"></script>
+<script type="text/javascript"
+	src="http://localhost:8080/StuScoreManage/stumanager/app/analyzestu.js"></script>
+</head>
+<body class="row bg">
+
+	<div ng-app="myApp">
+		<div class="container">
+			<h1 class="page-header">总体操作页面</h1>
+			<div class="tabbable tabs-left">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#tab1" data-toggle="tab">删除学生</a></li>
+					<li><a href="#tab2" data-toggle="tab">删除学生</a></li>
+					<li><a href="#tab3" data-toggle="tab">添加学生</a></li>
+					<li><a href="#tab4" data-toggle="tab">查询当前所有学生</a></li>
+					<li><a href="#tab5" data-toggle="tab">在页面上更新学生信息</a></li>
+					<li><a href="#tab6" data-toggle="tab">解析excel中学生信息</a></li>
+
+				</ul>
+				<div ng-controller="analyzestu">
+					<div class="tab-content">
+						<div class="tab-pane active" id="tab1">
+							<a
+								href="http://localhost:8080/StuScoreManage/stumanager/deleteid.html">
+								删除某学生条目根据学生学号</a>
+						</div>
+						<div class="tab-pane" id="tab2">
+							<a
+								href="http://localhost:8080/StuScoreManage/stumanager/deletename.html">
+								删除某学生姓名根据学生姓名
+								</p>
+						</div>
+						<div class="tab-pane" id="tab3">
+							<a
+								href="http://localhost:8080/StuScoreManage/stumanager/addstu.html">
+								添加学生（学生所有信息）</a>
+						</div>
+						<div class="tab-pane" id="tab4">
+							<a
+								href="http://localhost:8080/StuScoreManage/stumanager/findall.html">
+								查询当前所有学生（学生所有信息）附加搜索</a>
+						</div>
+						<div class="tab-pane" id="tab5">
+							<a
+								href="http://localhost:8080/StuScoreManage/stumanager/updataall.html">
+								在页面上更新学生信息(允许先搜索在更新和修改)</a>
+						</div>
+						<div class="tab-pane" id="tab6">
+							<button type="button" class="btn btn-default"
+								ng-click="analyze()">开始解析stuexcel.xlsx</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

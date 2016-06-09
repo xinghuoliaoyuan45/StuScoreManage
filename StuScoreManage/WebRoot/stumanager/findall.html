@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+	href="http://localhost:8080/StuScoreManage/vendor/bootstrap3/css/bg.css" />
+    <link rel="stylesheet"
+	href="http://localhost:8080/StuScoreManage/vendor/bootstrap3/css/bootstrap.min.css" />
+</head>
+<body>
+<div class="container">
+    <div ng-app="myApp">
+        <div ng-controller="nm">
+            <input type="text" ng-model="filterVal"><input type="button" ng-click="fnFilter()" value="搜索">
+            <table class="table">
+                 <thead>
+                <tr>
+                    <th ng-click="fnSort('id')">学号</th>
+                    <th>名字</th>
+                    <th ng-click="fnSort('stuclass')">班级</th>
+                    <th ng-click="fnSort('linux')">linux成绩</th>
+                    <th ng-click="fnSort('math')">高数成绩</th>
+                    <th ng-click="fnSort('java')">java成绩</th>
+                    <th>平均成绩</th>
+                    <th>总分</th>
+                </tr>
+                <tr ng-repeat="x in dataList">
+                    <th>{{ x.id}}</th>
+                    <th>{{ x.stuclass}}</th>
+                    <th>{{ x.username}}</th>
+                    <th>{{ x.linux}}</th>
+                    <th>{{ x.math}}</th>
+                    <th>{{ x.java}}</th>
+                    <th>{{(x.java+x.linux+x.math)/3 |number :1 }}</th>
+                    <th>{{(x.java+x.linux+x.math) |number :1 }}</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="http://localhost:8080/StuScoreManage/vendor/angular/angularjs.js"></script>
+    <script type="text/javascript" src="http://localhost:8080/StuScoreManage/stumanager/app/findall.js"></script>
+    </div>
+    </body>
+</html>

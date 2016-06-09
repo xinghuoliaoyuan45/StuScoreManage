@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"
+	href="http://localhost:8080/StuScoreManage/vendor/bootstrap3/css/bg.css" />
+   <link rel="stylesheet"
+	href="http://localhost:8080/StuScoreManage/vendor/bootstrap3/css/bootstrap.min.css" />
+    <script type="text/javascript" src="http://localhost:8080/StuScoreManage/vendor/angular/angularjs.js"></script>
+    <script type="text/javascript" src="http://localhost:8080/StuScoreManage/stumanager/app/delete.js"></script>
+</head>
+<body class="row bg1">
+
+
+<div ng-app="myApp" style="margin-top: 100px;">
+    <form name="myForm"  ng-controller="deleteid" class="container form-horizontal">
+        <div class="form-group" ng-class="{'has-error':myForm.stuid.$dirty && myForm.stuid.$invalid}">
+            <label class="col-sm-3 control-label"><strong>需要删除的学生学号</strong></label>
+            <div class="col-sm-8">
+                <input type="text" autocomplete="off" name="stuid"  ng-required="true"
+                       ng-maxlength="12" ng-model="stuid" class="form-control"
+                       placeholder="id">
+                <div ng-show="myForm.stuid.$dirty && myForm.stuid.$error.maxlength"
+                     class="alert alert-danger help-block">
+                    学生学号长度不能超过12位
+                </div>
+                <div ng-show="myForm.stuid.$dirty && myForm.stuid.$error.required"
+                     class="alert alert-danger help-block">
+                  学生学号不能为空
+                </div>
+
+            </div>
+
+        </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" ng-click="fndelete(stuid)"  class="btn btn-default"
+                            ng-disabled="myForm.$invalid">
+                        删除
+                    </button>
+                    <button type="reset" class="btn btn-default" ng-click="reset()">重置</button>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+</body>
+</html>

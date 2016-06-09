@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"
+	href="http://localhost:8080/StuScoreManage/vendor/bootstrap3/css/bg.css" />
+    <link rel="stylesheet"
+	href="http://localhost:8080/StuScoreManage/vendor/bootstrap3/css/bootstrap.min.css" />
+    <script type="text/javascript" src="http://localhost:8080/StuScoreManage/vendor/angular/angularjs.js"></script>
+    <script type="text/javascript" src="app/delete.js"></script>
+</head>
+<body class="row bg1">
+<div ng-app="myApp" style="margin-top: 100px;">
+    <form name="myForm"  ng-controller="deletename" class="container form-horizontal">
+        <div class="form-group" ng-class="{'has-error':myForm.stuname.$dirty && myForm.stuname.$invalid}">
+            <label class="col-sm-3 control-label"><strong>需要删除的学生name</strong></label>
+            <div class="col-sm-8">
+                <input type="text" autocomplete="off" name="stuname"  ng-required="true"
+                       ng-maxlength="5" ng-model="stuname" class="form-control"
+                       placeholder="如 张三">
+                <div ng-show="myForm.stuname.$dirty && myForm.stuname.$error.maxlength"
+                     class="alert alert-danger help-block">
+                    学生名字长度不能超过8位
+                </div>
+                <div ng-show="myForm.stuname.$dirty && myForm.stuname.$error.required"
+                     class="alert alert-danger help-block">
+                    学生名字不能为空
+                </div>
+
+            </div>
+
+        </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" ng-click="fndelete(stuname)"  class="btn btn-default"
+                            ng-disabled="myForm.$invalid">
+                        删除
+                    </button>
+                    <button type="reset" class="btn btn-default" ng-click="reset()">重置</button>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet"
+	href="http://localhost:8080/StuScoreManage/vendor/bootstrap3/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="http://localhost:8080/StuScoreManage/vendor/bootstrap3/css/bg.css" />
+</head>
+<body class="row bg1">
+	<div ng-app="myApp" style="margin-top: 100px;">
+		<form name="myForm" ng-controller="addstu"
+			class="container form-horizontal">
+
+			<div class="form-group"
+				ng-class="{'has-error':myForm.id.$dirty && myForm.id.$invalid}">
+				<label class="col-sm-2 control-label">学生学号</label>
+				<div class="col-sm-10">
+					<input type="text" autocomplete="off" name="id" ng-required="true"
+						ng-maxlength="12" ng-model="data.id" class="form-control"
+						placeholder="如201316920308">
+					<div ng-show="myForm.id.$dirty && myForm.id.$error.maxlength"
+						class="alert alert-danger help-block">学号长度不能超过12位</div>
+					<div ng-show="myForm.id.$dirty && myForm.id.$error.required"
+						class="alert alert-danger help-block">学生学号不能为空</div>
+
+				</div>
+
+
+				<div class="form-group"
+					ng-class="{'has-error':myForm.username.$dirty && myForm.username.$invalid}">
+					<label class="col-sm-2 control-label">学生名字</label>
+					<div class="col-sm-10">
+						<input type="text" autocomplete="off" name="username"
+							ng-required="true" ng-maxlength="8" ng-model="data.username"
+							class="form-control" placeholder="张三">
+						<div
+							ng-show="myForm.username.$dirty && myForm.username.$error.maxlength"
+							class="alert alert-danger help-block">学生名字长度不能超过8位</div>
+						<div
+							ng-show="myForm.username.$dirty && myForm.username.$error.required"
+							class="alert alert-danger help-block">学生名字不能为空</div>
+
+						
+					</div>
+
+				</div>
+				<div class="form-group"
+					ng-class="{'has-error':myForm.stuclass.$dirty && myForm.stuclass.$invalid}">
+					<label class="col-sm-2 control-label">学生班级</label>
+					<div class="col-sm-10">
+						<input type="text" autocomplete="off" name="stuclass"
+							ng-required="true" ng-maxlength="10" ng-model="data.stuclass"
+							class="form-control" placeholder="软件1305">
+						<div
+							ng-show="myForm.stuclass.$dirty && myForm.stuclass.$error.maxlength"
+							class="alert alert-danger help-block">stuclass长度不能超过10位</div>
+						<div
+							ng-show="myForm.stuclass.$dirty && myForm.stuclass.$error.required"
+							class="alert alert-danger help-block">stuclass不能为空</div>
+						
+					</div>
+				</div>
+
+
+				<div class="form-group"
+					ng-class="{'has-error':myForm.linux.$dirty && myForm.linux.$invalid}">
+					<label class="col-sm-2 control-label">Linux成绩</label>
+					<div class="col-sm-10">
+						<input type="text" autocomplete="off" name="linux"
+							ng-required="true" ng-maxlength="5" ng-model="data.linux"
+							class="form-control" placeholder="Linux成绩">
+						<div
+							ng-show="myForm.linux.$dirty && myForm.linux.$error.maxlength"
+							class="alert alert-danger help-block">Linux成绩长度不能超过5位</div>
+						<div ng-show="myForm.linux.$dirty && myForm.linux.$error.required"
+							class="alert alert-danger help-block">Linux成绩不能为空</div>
+						
+					</div>
+				</div>
+				<div class="form-group"
+					ng-class="{'has-error':myForm.math.$dirty && myForm.math.$invalid}">
+					<label class="col-sm-2 control-label">math成绩</label>
+					<div class="col-sm-10">
+						<input type="text" autocomplete="off" name="math"
+							ng-required="true" ng-maxlength="5" ng-model="data.math"
+							class="form-control" placeholder="math成绩">
+						<div ng-show="myForm.math.$dirty && myForm.math.$error.maxlength"
+							class="alert alert-danger help-block">math成绩长度不能超过5位</div>
+						<div ng-show="myForm.math.$dirty && myForm.math.$error.required"
+							class="alert alert-danger help-block">math成绩不能为空</div>
+					
+					</div>
+				</div>
+				<div class="form-group"
+					ng-class="{'has-error':myForm.java.$dirty && myForm.java.$invalid}">
+					<label class="col-sm-2 control-label">java成绩</label>
+					<div class="col-sm-10">
+						<input type="text" autocomplete="off" name="java"
+							ng-required="true" ng-maxlength="5" ng-model="data.java"
+							class="form-control" placeholder="java成绩">
+						<div ng-show="myForm.java.$dirty && myForm.java.$error.maxlength"
+							class="alert alert-danger help-block">java成绩长度不能超过5位</div>
+						<div ng-show="myForm.java.$dirty && myForm.java.$error.required"
+							class="alert alert-danger help-block">java成绩不能为空</div>
+						
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="button" class="btn btn-default"
+							ng-click="fnadd(data)" ng-disabled="myForm.$invalid">添加
+						</button>
+						<button type="reset" class="btn btn-default" ng-click="reset()">重置</button>
+					</div>
+				</div>
+		</form>
+
+	</div>
+
+
+	<script type="text/javascript" src="http://localhost:8080/StuScoreManage/vendor/angular/angularjs.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/StuScoreManage/stumanager/app/addstu.js"></script>
+
+
+</body>
+</html>
