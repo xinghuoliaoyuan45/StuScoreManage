@@ -27,10 +27,11 @@
 
 ----------
 截图
-![image](https://github.com/xinghuoliaoyuan45/StuScoreManage/blob/master/1.png
-![image](https://github.com/xinghuoliaoyuan45/StuScoreManage/blob/master/2.png
-![image](https://github.com/xinghuoliaoyuan45/StuScoreManage/blob/master/3.png
-![image](https://github.com/xinghuoliaoyuan45/StuScoreManage/blob/master/4.png
-![image](https://github.com/xinghuoliaoyuan45/StuScoreManage/blob/master/5.png
-![image](https://github.com/xinghuoliaoyuan45/StuScoreManage/blob/master/6.png
+![image](![image](https://github.com/xinghuoliaoyuan45/StuScoreManage/blob/master/1.png)
+![image](![image](https://github.com/xinghuoliaoyuan45/StuScoreManage/blob/master/2.png)
+![image](![image](https://github.com/xinghuoliaoyuan45/StuScoreManage/blob/master/3.png)
+![image](![image](https://github.com/xinghuoliaoyuan45/StuScoreManage/blob/master/4.png)
+![image](![image](https://github.com/xinghuoliaoyuan45/StuScoreManage/blob/master/5.png)
+![image](![image](https://github.com/xinghuoliaoyuan45/StuScoreManage/blob/master/6.png)
+
 
