@@ -13,7 +13,7 @@
 
 - 导入excel使用了 bingyulei007的 excel与java之间转换的ORM框架
 - 源地址https://github.com/bingyulei007/bingExcel 
-- 再次感谢bingyulei007，估计作者不需要我这瓜皮读者，哈哈
+
 
 - bootstrap+angular js+springmvc+tomcat + hsqldb 完成功能
 - 不是idea项目 所以jar有点多 见谅
